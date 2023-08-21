@@ -1,8 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Adlam&display=swap');
+
 body {
     background-color: #EECBAA;
 }
 
+.cats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
 
+.cats .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cat1,
+.cat2,
+.cat3,
+.cat4 {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.row1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.row2 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.login {
+    margin-top: 10vh;
+}
 #navbg {
     display: flex;
     flex-direction: column;
@@ -26,6 +67,7 @@ body {
 }
 
 .nav-link {
+    font-family: 'ADLaM Display', cursive;
     display: block;
     padding: 10px 20px; 
     text-align: center;
@@ -34,6 +76,7 @@ body {
 
 
 #titlebg {
+    font-family: 'ADLaM Display', cursive;
     background-color: violet;
     position: fixed;
     top: 0;
@@ -42,10 +85,10 @@ body {
     padding: 10px 20px;
     text-align: left;
     margin-right: 250px;
-    z-index: 999;
 }
 
 #mainbg {
+    font-family: 'Noto Sans Adlam', sans-serif;
     background-color: peru;
     padding: 20px;
     margin-top: 60px;
