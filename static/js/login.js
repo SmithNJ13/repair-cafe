@@ -4,6 +4,6 @@ submitButton.addEventListener("click", function (event) {
     event.preventDefault();
 
     localStorage.setItem("authenticated", "true");
-    window.location.href = "./profile.html";
+    window.location.href = "./home.html";
 });
  
