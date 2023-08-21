@@ -13,42 +13,45 @@
     <title>Repair Café</title>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container" id="navbg">
-            <!-- NavBar content -->
-            <ul class="navbar-nav">
-                <li class="nav-item"><a href="./login.html" class="nav-link">LOGIN</a></li>
-                <li class="nav-item"><a href="./items.html" class="nav-link">ITEMS</a></li>
-                <li class="nav-item"><a href="./jobs.html" class="nav-link">JOBS</a></li>
-            </ul>
-        </div>
-    </nav>
-    <!-- End of Navigation Bar -->
-
-    <!-- Title -->
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container" id="navbg">
+                <!-- NavBar content -->
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="./login.html" class="nav-link">LOGIN</a></li>
+                    <li class="nav-item"><a href="./items.html" class="nav-link">ITEMS</a></li>
+                    <li class="nav-item"><a href="./jobs.html" class="nav-link">JOBS</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End of Navigation Bar -->
+            <!-- Title -->
     <header>
         <div class="container" id="titlebg">
-            <a href="./home.html">Repair Café (Items)</a>
-        </div>
+            <a href="./home.html">Repair Café</a>
     </header>
     <!-- End of Title -->
-
-    <!-- Main body (images, descriptions, content) -->
     <main>
-        <div class="container" id="mainbg">
-            <div class="cats">
-                <div class="container row1">
-                    <img class="cat1" src="https://pixabay.com/get/g957bfa21ca315d73cae155b548f3b50909163d16eb46932288e19ec8e9e55e62a690b8dd3df070e1042e5ad65027aa4bfc49c31753933d6b606749ebdd7334cf_1280.png" alt="cute cat">
-                    <img class="cat2" src="https://pixabay.com/get/g957bfa21ca315d73cae155b548f3b50909163d16eb46932288e19ec8e9e55e62a690b8dd3df070e1042e5ad65027aa4bfc49c31753933d6b606749ebdd7334cf_1280.png" alt="cute cat">
+        <h1> POST AN ITEM </h1>
+        <div class="container">
+            <!-- Login Form -->
+            <form class="postItem">
+                <div class="mb-3">
+                    <label for="formFileSm" class="form-label">Upload an image?</label>
+                    <input class="form-control form-control-sm" id="formFileSm" type="file">
                 </div>
-                <div class="container row2">
-                    <img class="cat3" src="https://pixabay.com/get/g957bfa21ca315d73cae155b548f3b50909163d16eb46932288e19ec8e9e55e62a690b8dd3df070e1042e5ad65027aa4bfc49c31753933d6b606749ebdd7334cf_1280.png" alt="cute cat">
-                    <img class="cat4" src="https://pixabay.com/get/g957bfa21ca315d73cae155b548f3b50909163d16eb46932288e19ec8e9e55e62a690b8dd3df070e1042e5ad65027aa4bfc49c31753933d6b606749ebdd7334cf_1280.png" alt="cute cat">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Item name:</label>
+                  <input type="email" class="form-control" placeholder="ex. PS5" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
-            </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Item description:</label>
+                  <input class="form-control" type="text" placeholder="ex. my PS5 fans are broken" aria-label="default input example">
+                </div>
+                <button type="submit" class="btn btn-success" id="submitBtn">Submit</button>
+              </form>
+              <!-- End of Login Form -->
         </div>
     </main>
-    <!-- End of Main Body -->
 </body>
 </html>
