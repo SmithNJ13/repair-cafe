@@ -41,15 +41,17 @@
         </div>
         <div class="container">
             <!-- Login Form -->
-            <form class="login">
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Email address or Username</label>
-                  <input type="email" class="form-control" placeholder="repairCat@email.com" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input type="password" class="form-control" placeholder="password" id="exampleInputPassword1">
-                </div>
+            <form id="login-form">
+                <fieldset>
+                    <div class="mb3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" name="username">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-control" name="password">
+                </fieldset>
                 <button type="submit" class="btn btn-success" id="submitBtn">Submit</button>
                 <ul>Don't have an account? Sign up <a href="./register.html">here</a></ul>
               </form>

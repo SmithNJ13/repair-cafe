@@ -125,36 +125,29 @@ header {
 }
 /*END OF NAVBAR*/
 
-/*STYLING OF LOGIN*/
-.login, .postItem {
+/*STYLING OF LOGIN & REGISTER*/
+#login-form, #register-form {
+    position: relative;
     margin-top: 10vh;
-    margin-right: 30vh;
+    margin-right: 23.4vw;
+    margin-left: 10.9vw;
 }
-.login ul {
+#login-form ul {
     font-weight: bold;
     position: relative;
     right: 1.5vw;
 }
+.form-control {
+    max-width: 50rem;
+}
 #submitBtn {
     position: relative;
-    left: 48vw;
+    top: 1rem;
+    left: 29vw;
 }
-/*END OF LOGIN*/
+/*END OF LOGIN & REGISTER*/
 
 /*STYLING OF USER PROFILE*/
-#userActions {
-    margin-left: 10vw;
-    margin-top: 20vh;
-    display: flex;
-    flex-direction: row;
-    align-items: cen;
-    height: auto;
-    width: auto;
-    gap: 200px;
-}
-.userInfo {
-    background-color: ivory;
-}
 .aboutMe #aboutMeBox {
     background-color: ivory;
     min-height: 10vh;
@@ -166,6 +159,10 @@ header {
     margin-left: 52vw;
     padding-top: 20px;
     padding-left: 10px;
+}
+.userActions a{
+    text-decoration: none;
+    color: black;
 }
 .userActions button {
     max-height: 40px;
