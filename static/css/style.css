@@ -14,10 +14,6 @@ html {
 body {
     background-color: var(--pastelBrown);
 }
-h1 {
-    margin-top: 10vh;
-    margin-left: 30vw;
-}
 /*STYLING OF TITLE*/
 header {
     background-color: ivory;
@@ -118,6 +114,7 @@ header {
     border-top: 0;
     border-right: 0;
     border-left: 1;
+    border-width: 5px;
 }
 .navbar-nav {
     display: block;
@@ -133,6 +130,15 @@ header {
     margin-top: 10vh;
     margin-right: 30vh;
 }
+.login ul {
+    font-weight: bold;
+    position: relative;
+    right: 1.5vw;
+}
+#submitBtn {
+    position: relative;
+    left: 48vw;
+}
 /*END OF LOGIN*/
 
 /*STYLING OF USER PROFILE*/
@@ -142,15 +148,28 @@ header {
     display: flex;
     flex-direction: row;
     align-items: cen;
-    background-color: aqua;
     height: auto;
     width: auto;
     gap: 200px;
 }
-#userActions button {
+.userInfo {
+    background-color: ivory;
+}
+.aboutMe #aboutMeBox {
+    background-color: ivory;
+    min-height: 10vh;
+    max-height: 10vh;
+    overflow-y: scroll;
+}
+.userActions {
+    position: relative;
+    margin-left: 52vw;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+.userActions button {
     max-height: 40px;
     max-width: 160px;
-    align-items: center;
 }
 /*END OF USER PROFILE*/
 
