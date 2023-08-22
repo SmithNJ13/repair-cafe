@@ -9,27 +9,28 @@
     <!--  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script defer src="./static/js/auth.js"></script>
     <script defer src="./static/js/register.js"></script>
     <link rel="stylesheet" href="./static/css/style.css">
     <title>Repair Café</title>
 </head>
 <body>
         <!-- Navigation Bar -->
-        <nav class="navbar navbar-expand-lg">
-            <div class="container" id="navbg">
-                <!-- NavBar content -->
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a href="./login.html" class="nav-link">LOGIN</a></li>
-                    <li class="nav-item"><a href="./items.html" class="nav-link">ITEMS</a></li>
-                    <li class="nav-item"><a href="./jobs.html" class="nav-link">JOBS</a></li>
-                </ul>
-            </div>
-        </nav>
+        <div class="container" id="navbg">
+            <!-- NavBar content -->
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="./logout.html"  id="logout" class="nav-link">LOGOUT</a></li>
+                <li class="nav-item"><a href="./profile.html" class="nav-link" id="profile">PROFILE</a></li>
+                <li class="nav-item"><a href="./login.html" id= "login" class="nav-link">LOGIN</a></li>
+                <li class="nav-item"><a href="./items.html" class="nav-link">ITEMS</a></li>
+                <li class="nav-item"><a href="./jobs.html" class="nav-link">JOBS</a></li>
+            </ul>
+        </div>
         <!-- End of Navigation Bar -->
             <!-- Title -->
     <header>
         <div class="container" id="titlebg">
-            <a href="./home.html">Repair Café</a>
+            <a class="title" href="./home.html">Repair Café</a>
     </header>
     <!-- End of Title -->
     <main>

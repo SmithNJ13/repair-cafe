@@ -1,23 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Adlam&display=swap');
-
-body {
-    background-color: #EECBAA;
+:root {
+    --spicyMix: #8A584C;
+    --cadetGrey: #8FA6AC;
+    --champagne: #F5EACF;
+    --pastelBrown: #e9ceb6;
+    --pastelGreen: #D2E0BD;
 }
 
-.cats {
-    background-color: silver;
+html {
+    overflow-y: scroll;
+}
+body {
+    background-color: var(--pastelBrown);
+}
+h1 {
+    margin-top: 10vh;
+    margin-left: 30vw;
+}
+/*STYLING OF TITLE*/
+#titlebg {
+    font-family: 'ADLaM Display', cursive;
+    background-color: violet;
+    text-align: left;
+    margin-left: 0;
+}
+.title {
+    color: var(--pastelGreen);
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 700;
+    padding-left: 3rem;
+    text-decoration: underline black 3px;
+    -webkit-text-stroke: black 0.33px;
+}
+/*END OF TITLE*/
+
+/*STLING OF INTRO*/
+.introBody {
+    padding-top: 2.5rem;
+    text-align: center;
+    margin-right: 23.4vw;
+    margin-left: 10.9vw;
+}
+.introBody text {
+    font-family: "Noto Sans Adlam", cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/*END OF INTRO*/
+
+/*STYLING OF SERVICES*/
+#mainbg {
+    background-color: var(--spicyMix);
+    padding: 10px;
+    margin-top: 8vh;
+    margin-right: 23.4vw;
+    margin-left: 10.9vw;
+    width: auto;
+}
+.services {
+    background-color: ivory;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 250px;
+    gap: 25px;
 }
-
-.cats .container {
+.services .container {
     display: flex;
     justify-content: space-around;
 }
-
 .cat1,
 .cat2,
 .cat3,
@@ -28,80 +80,45 @@ body {
     object-fit: cover;
 }
 
-.row1 {
+.row1-text p, .row2-text p {
+    font-family: "Noto Sans Adlam", cursive;
+    font-weight: 400;
+    background-color: aquamarine;
+    text-align: center;
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
+    justify-content: space-evenly;
+    max-width: 20vw;
 }
+/*END OF SERVICES*/
 
-.row2 {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    margin-top: 20px;
+/*STYLING OF NAVBAR*/
+#navbg {
+    flex-direction: column;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    right: 0;
+    background-color: var(--pastelGreen);
+    height: 100vh;
+    width: 12.5vw; 
 }
+.navbar-nav {
+    display: block;
+    padding-top: 2.5rem;
+}
+.nav-item {
+    font-family: 'ADLaM Display', cursive;
+}
+/*END OF NAVBAR*/
 
+/*STYLING OF LOGIN*/
 .login, .postItem {
     margin-top: 10vh;
     margin-right: 30vh;
 }
-h1 {
-    margin-top: 10vh;
-    margin-left: 30vw;
-}
-#navbg {
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-color: green;
-    height: 100vh;
-    width: 12.5vw; 
-    padding: 25px;
-}
+/*END OF LOGIN*/
 
-
-.navbar-nav {
-    display: block;
-}
-
-.nav-link {
-    font-family: 'ADLaM Display', cursive;
-    display: block;
-    padding: 20px 20px; 
-    text-align: center;
-}
-
-
-#titlebg {
-    font-family: 'ADLaM Display', cursive;
-    background-color: violet;
-    position: flex;
-    top: 0;
-    left: 0;
-    width: calc(100vw - 250px);
-    padding: 10px 20px;
-    text-align: left;
-    margin-right: 250px;
-}
-
-#mainbg {
-    font-family: 'Noto Sans Adlam', sans-serif;
-    background-color: peru;
-    padding: 20px;
-    margin-top: 60px;
-    margin-left: 0;
-    width: calc(100vw - 250px); 
-    position: fixed;
-    top: 60px;
-    left: 0;
-    right: 250px; 
-    bottom: 0;
-}
-
+/*STYLING OF USER PROFILE*/
 #userActions {
     margin-left: 10vw;
     margin-top: 20vh;
@@ -113,14 +130,14 @@ h1 {
     width: auto;
     gap: 200px;
 }
-
 #userActions button {
     max-height: 40px;
     max-width: 160px;
     align-items: center;
 }
+/*END OF USER PROFILE*/
 
-#mainbg:hover, #titlebg:hover, #navbg:hover, #userActions:hover, .cats:hover {
+#mainbg:hover, #titlebg:hover, #navbg:hover, #userActions:hover, .services:hover, p:hover {
     background-color: transparent;
 }
 
