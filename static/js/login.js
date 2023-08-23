@@ -8,11 +8,11 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            username: form.get("username"),
-            password: form.get("password")
+            user_name: form.get("username"),
+            user_password: form.get("password")
         })
     }
-    const response = await fetch("http://localhost:3500/account", options)
+    const response = await fetch("http://localhost:5000/accounts", options)
     const data = await response.json()
 
     if(response.status == 200) {

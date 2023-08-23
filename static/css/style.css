@@ -83,7 +83,7 @@ header {
 .cat4 {
     width: 200px;
     height: 200px;
-    padding: 0px;
+    padding: 1rem;
     object-fit: cover;
 }
 
@@ -95,6 +95,19 @@ header {
     display: flex;
     justify-content: space-evenly;
     max-width: 20vw;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+.item #purchase {
+    position: relative;
+    margin: auto;
+    bottom: 2.7rem;
+    left: 7.7rem;
 }
 /*END OF SERVICES*/
 
