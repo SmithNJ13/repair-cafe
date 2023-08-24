@@ -5,11 +5,13 @@ document.addEventListener("DOMContentLoaded", async () => {
         e.preventDefault();
         const formData = new FormData(itemForm)
         const data = {}
+        data['seller_id'] = localStorage.getItem("id")
+
         formData.forEach((value, key) => {
             data[key] = value
         })
         try {
-            const response = await fetch("http://localhost:5000/items", {
+            const response = await fetch("http://localhost:3000/items", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
