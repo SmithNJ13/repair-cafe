@@ -88,14 +88,13 @@ header {
 .row1-text p, .row2-text p {
     font-family: "Noto Sans Adlam", cursive;
     font-weight: 400;
-    background-color: aquamarine;
     text-align: center;
     display: flex;
     justify-content: space-evenly;
     max-width: 20vw;
 }
 
-.item {
+.item, .job {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -106,6 +105,16 @@ header {
     margin: auto;
     bottom: 2.7rem;
     left: 7.7rem;
+}
+.container.item #name, .container.job #name {
+    width: 100%;
+    margin: 0.5rem;
+    border-bottom: 0.25rem solid var(--pastelBrown);
+}
+@media all and (min-width: 10rem) {
+    .container.item #name {
+        width: 15rem;
+    }
 }
 /*END OF SERVICES*/
 
