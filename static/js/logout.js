@@ -9,7 +9,7 @@ document.getElementById("logout").addEventListener("click", async (e) => {
       }
     }
 
-    const response = await fetch("http://localhost:3000/accounts/logout", options)
+    const response = await fetch("https://cafe-test-ngey.onrender.com/accounts/logout", options)
 
     if (response.status = 200) {
       localStorage.removeItem("token")

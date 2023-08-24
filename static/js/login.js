@@ -13,7 +13,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
         })
     }
 
-    const response = await fetch("http://localhost:3000/accounts/login", options)
+    const response = await fetch("https://cafe-test-ngey.onrender.com/accounts/login", options)
     const data = await response.json()
 
     if(response.status == 200) {

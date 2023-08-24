@@ -14,7 +14,7 @@ document.getElementById("register-form").addEventListener("submit", async (e) =>
         })
     }
 
-    const response = await fetch("http://localhost:3000/accounts/register", options);
+    const response = await fetch("https://cafe-test-ngey.onrender.com/accounts/register", options);
 
     const data = await response.json();
     if(response.status == 201) {
