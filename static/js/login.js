@@ -12,6 +12,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
             user_password: form.get("password")
         })
     }
+
     const response = await fetch("http://localhost:3000/accounts/login", options)
     const data = await response.json()
 

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
-    const response = await fetch("http://localhost:5000/jobs");
+    const response = await fetch("http://localhost:3000/jobs");
     const data = await response.json();
     const arr = data.data;
 
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
         async function deleteFromServer(id) {
             try {
-                const response = await fetch(`http://localhost:5000/jobs/${id}`, {
+                const response = await fetch(`http://localhost:3000/jobs/${id}`, {
                     method: "DELETE"
                 })
                 if(response.status === 204) {

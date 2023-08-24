@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
-    const response = await fetch("http://localhost:5000/items");
+    const response = await fetch("http://localhost:3000/items");
     const data = await response.json();
     const arr = data.data;
 
@@ -15,18 +15,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     function containerCreate(item) {
         const itemElement = document.createElement('div');
         itemElement.className = 'container item';
-        itemElement.id = `item_${item.itemId}`;
+        itemElement.id = `item_${item.item_id}`;
 
-        itemElement.appendChild(pCreate('name', item.itemName));
-        itemElement.appendChild(pCreate('seller', item.sellerId));
-        itemElement.appendChild(pCreate('desc', item.itemDescription));
+        itemElement.appendChild(pCreate('name', item.item_name));
+        itemElement.appendChild(pCreate('seller', item.seller_id));
+        itemElement.appendChild(pCreate('desc', item.item_description));
         itemElement.appendChild(pCreate('price', `Price: £${item.price}`));
 
         const purchaseButton = document.createElement('button');
         purchaseButton.id = 'purchase';
         purchaseButton.textContent = 'Purchase';
         purchaseButton.addEventListener("click", () => {
-            getInfo(item.itemName, item.itemId);
+            getInfo(item.item_name, item.item_id);
         })
         itemElement.appendChild(purchaseButton);
 
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
         async function deleteFromServer(id) {
             try {
-                const response = await fetch(`http://localhost:5000/items/${id}`, {
+                const response = await fetch(`http://localhost:3000/items/${id}`, {
                     method: "DELETE"
                 })
                 if(response.status === 204) {
