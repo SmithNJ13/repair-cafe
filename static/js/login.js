@@ -12,12 +12,13 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
             user_password: form.get("password")
         })
     }
-    const response = await fetch("http://localhost:5000/accounts", options)
+    const response = await fetch("http://localhost:3000/accounts/login", options)
     const data = await response.json()
 
     if(response.status == 200) {
         localStorage.setItem("token", data.token)
-        window.location.assign("home.html")
+        localStorage.setItem("id", data.id)
+        window.location.assign("index.html")
     } else {
         alert(data.error)
     }
