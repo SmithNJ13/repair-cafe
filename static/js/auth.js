@@ -1,4 +1,4 @@
-const authenticated = localStorage.getItem("authenticated") === "true";
+const authenticated = localStorage.getItem("token");
 function updateNav() {
     const logout = document.getElementById("logout")
     const login = document.getElementById("login")
@@ -15,4 +15,3 @@ function updateNav() {
     }
 }
 updateNav();
-module.exports = authenticated;

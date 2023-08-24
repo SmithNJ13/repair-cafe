@@ -13,7 +13,9 @@ document.getElementById("register-form").addEventListener("submit", async (e) =>
             user_password: form.get("password")
         })
     }
-    const response = await fetch("http://localhost:3000/accounts", options);
+
+    const response = await fetch("http://localhost:3000/accounts/register", options);
+
     const data = await response.json();
     if(response.status == 201) {
         window.location.href = "./login.html"
