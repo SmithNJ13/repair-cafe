@@ -15,41 +15,63 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container" id="navbg">
-            <!-- NavBar content -->
-            <ul class="navbar-nav">
-                <li class="nav-item"><a href="./logout.html"  id="logout" class="nav-link">LOGOUT</a></li>
-                <li class="nav-item"><a href="./profile.html" class="nav-link" id="profile">PROFILE</a></li>
-                <li class="nav-item"><a href="./login.html" id= "login" class="nav-link">LOGIN</a></li>
-                <li class="nav-item"><a href="./items.html" class="nav-link">ITEMS</a></li>
-                <li class="nav-item"><a href="./jobs.html" class="nav-link">JOBS</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="container" id="nav_box">
+        <!-- NavBar content -->
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="./logout.html"  class="nav-link" id="logout">LOGOUT</a></li>
+            <li class="nav-item"><a href="./profile.html" class="nav-link" id="profile">PROFILE</a></li>
+            <li class="nav-item"><a href="./login.html" class="nav-link" id= "login">LOGIN</a></li>
+            <li class="nav-item"><a href="./items.html" class="nav-link" id="items">ITEMS</a></li>
+            <li class="nav-item"><a href="./jobs.html" class="nav-link" id="jobs">JOBS</a></li>
+        </ul>
+    </div>
     <!-- End of Navigation Bar -->
 
     <!-- Title -->
     <header>
-        <div class="container" id="titlebg">
-            <a href="./home.html">Repair Café</a>
+        <div class="container" id="title_box">
+            <a id="title_text" href="./home.html">Repair Café</a>
         </div>
+        <div id="line"></div>
     </header>
     <!-- End of Title -->
 
     <!-- Main body (images, descriptions, content) -->
     <main>
-        <div class="container" id="mainbg">
-            <h1>HOME PAGE</h1>
-            <div class="cats">
-                <div class="container row1">
-                    <img class="cat1" src="https://pixabay.com/get/g957bfa21ca315d73cae155b548f3b50909163d16eb46932288e19ec8e9e55e62a690b8dd3df070e1042e5ad65027aa4bfc49c31753933d6b606749ebdd7334cf_1280.png" alt="cute cat">
-                    <img class="cat2" src="https://pixabay.com/get/g957bfa21ca315d73cae155b548f3b50909163d16eb46932288e19ec8e9e55e62a690b8dd3df070e1042e5ad65027aa4bfc49c31753933d6b606749ebdd7334cf_1280.png" alt="cute cat">
+        <div class="intro">
+            <text>Welcome to the Repair Café!<br>Here you can buy/sell items, or get hooked up with a fixer that can repair your items!</text>
+        </div>
+        <div class="container" id="main_box">
+            <div class="services" id="1">
+                <div class="container row1-images">
+                    <img id="cat1" src="./static/images/cuteCat.png" alt="cute cat">
+                    <img id="cat2" src="./static/images/cuteCat.png" alt="cute cat">
                 </div>
-                <div class="container row2">
-                    <img class="cat3" src="https://pixabay.com/get/g957bfa21ca315d73cae155b548f3b50909163d16eb46932288e19ec8e9e55e62a690b8dd3df070e1042e5ad65027aa4bfc49c31753933d6b606749ebdd7334cf_1280.png" alt="cute cat">
-                    <img class="cat4" src="https://pixabay.com/get/g957bfa21ca315d73cae155b548f3b50909163d16eb46932288e19ec8e9e55e62a690b8dd3df070e1042e5ad65027aa4bfc49c31753933d6b606749ebdd7334cf_1280.png" alt="cute cat">
+                <div class="container row1-text">
+                    <div class="container item" id="service_1">
+                        <p id="name">Purchase items!</p>
+                        <p id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod magni assumenda architecto debitis atque dolorum quae magnam tempora? Delectus, ad.</p>
+                    </div>
+                    <div class="container item" id="service_2">
+                        <p id="name">Sell items!</p>
+                        <p id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod magni assumenda architecto debitis atque dolorum quae magnam tempora? Delectus, ad.</p>
+                    </div>
                 </div>
+            </div>
+            <div class="services" id="2">
+                <div class="container row2-images">
+                    <img id="cat3" src="./static/images/cuteCat.png" alt="cute cat">
+                    <img id="cat4" src="./static/images/cuteCat.png" alt="cute cat">
+                </div>
+                <div class="container row2-text">
+                    <div class="container item" id="service_3">
+                        <p id="name">Request repairs!</p>
+                        <p id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod magni assumenda architecto debitis atque dolorum quae magnam tempora? Delectus, ad.</p>
+                    </div>
+                    <div class="container item" id="service_4">
+                        <p id="name">Become a fixer!</p>
+                        <p id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod magni assumenda architecto debitis atque dolorum quae magnam tempora? Delectus, ad.</p>
+                    </div>
             </div>
         </div>
     </main>

@@ -1,126 +1,187 @@
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Adlam&display=swap');
-
-body {
-    background-color: #EECBAA;
+:root {
+    --spicyMix: #8A584C;
+    --cadetGrey: #8FA6AC;
+    --champagne: #F5EACF;
+    --pastelBrown: #e9ceb6;
+    --pastelGreen: #D2E0BD;
 }
 
-.cats {
-    background-color: silver;
+html {
+    overflow-y: scroll;
+}
+body {
+    background-color: var(--pastelBrown);
+}
+/*STYLING OF TITLE*/
+header {
+    background-color: ivory;
+}
+#line {
+    width: 100%;
+    height: 10px;
+    background-color: var(--spicyMix);
+    margin: 20px 0;;
+}
+#title_box {
+    font-family: 'ADLaM Display', cursive;
+    position: relative;
+    top: 10px;
+    text-align: left;
+    margin-left: 0;
+}
+#title_text {
+    color: var(--pastelGreen);
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 700;
+    padding-left: 3rem;
+    text-decoration: none;
+    -webkit-text-stroke: black 0.33px;
+}
+/*END OF TITLE*/
+
+/*STLING OF INTRO*/
+.intro {
+    padding-top: 2.5rem;
+    text-align: center;
+    margin-right: 23.4vw;
+    margin-left: 10.9vw;
+}
+.intro text {
+    font-family: "Noto Sans Adlam", cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/*END OF INTRO*/
+
+/*STYLING OF SERVICES*/
+#main_box {
+    background-color: var(--spicyMix);
+    padding: 10px;
+    margin-top: 8vh;
+    margin-right: 23.4vw;
+    margin-left: 10.9vw;
+    margin-bottom: 8vh;
+    width: auto;
+}
+.services {
+    background-color: ivory;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 250px;
+    padding: 1rem;
+    gap: 25px;
 }
-
-.cats .container {
+.services .container {
     display: flex;
     justify-content: space-around;
 }
-
-.cat1,
-.cat2,
-.cat3,
-.cat4 {
+.services img {
     width: 200px;
     height: 200px;
-    padding: 0px;
+    padding: 1rem;
     object-fit: cover;
 }
 
-.row1 {
+.row1-text p, .row2-text p {
+    font-family: "Noto Sans Adlam", cursive;
+    font-weight: 400;
+    background-color: aquamarine;
+    text-align: center;
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
+    justify-content: space-evenly;
+    max-width: 20vw;
 }
 
-.row2 {
+.item {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    flex-direction: column;
+    position: relative;
     align-items: center;
-    margin-top: 20px;
 }
+.item #purchase {
+    position: relative;
+    margin: auto;
+    bottom: 2.7rem;
+    left: 7.7rem;
+}
+/*END OF SERVICES*/
 
-.login, .postItem {
-    margin-top: 10vh;
-    margin-right: 30vh;
-}
-h1 {
-    margin-top: 10vh;
-    margin-left: 30vw;
-}
-#navbg {
+/*STYLING OF NAVBAR*/
+#nav_box {
     flex-direction: column;
     position: fixed;
+    text-align: center;
     top: 0;
     right: 0;
-    bottom: 0;
-    background-color: green;
+    background-color: var(--pastelGreen);
     height: 100vh;
     width: 12.5vw; 
-    padding: 25px;
+    border-style: solid;
+    border-color: var(--spicyMix);
+    border-bottom: 0;
+    border-top: 0;
+    border-right: 0;
+    border-left: 1;
+    border-width: 5px;
 }
-
-
 .navbar-nav {
     display: block;
+    padding-top: 2.5rem;
 }
-
-.nav-link {
+.nav-item {
     font-family: 'ADLaM Display', cursive;
-    display: block;
-    padding: 20px 20px; 
-    text-align: center;
 }
+/*END OF NAVBAR*/
 
-
-#titlebg {
-    font-family: 'ADLaM Display', cursive;
-    background-color: violet;
-    position: flex;
-    top: 0;
-    left: 0;
-    width: calc(100vw - 250px);
-    padding: 10px 20px;
-    text-align: left;
-    margin-right: 250px;
+/*STYLING OF LOGIN & REGISTER*/
+#login-form, #register-form {
+    position: relative;
+    margin-top: 10vh;
+    margin-right: 23.4vw;
+    margin-left: 10.9vw;
 }
-
-#mainbg {
-    font-family: 'Noto Sans Adlam', sans-serif;
-    background-color: peru;
-    padding: 20px;
-    margin-top: 60px;
-    margin-left: 0;
-    width: calc(100vw - 250px); 
-    position: fixed;
-    top: 60px;
-    left: 0;
-    right: 250px; 
-    bottom: 0;
+#login-form ul {
+    font-weight: bold;
+    position: relative;
+    right: 1.5vw;
 }
-
-#userActions {
-    margin-left: 10vw;
-    margin-top: 20vh;
-    display: flex;
-    flex-direction: row;
-    align-items: cen;
-    background-color: aqua;
-    height: auto;
-    width: auto;
-    gap: 200px;
+.form-control {
+    max-width: 50rem;
 }
+#submitBtn {
+    position: relative;
+    top: 1rem;
+    left: 29vw;
+}
+/*END OF LOGIN & REGISTER*/
 
-#userActions button {
+/*STYLING OF USER PROFILE*/
+.aboutMe #aboutMeBox {
+    background-color: ivory;
+    min-height: 10vh;
+    max-height: 10vh;
+    overflow-y: scroll;
+}
+.userActions {
+    position: relative;
+    margin-left: 52vw;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+.userActions a{
+    text-decoration: none;
+    color: black;
+}
+.userActions button {
     max-height: 40px;
     max-width: 160px;
-    align-items: center;
 }
+/*END OF USER PROFILE*/
 
-#mainbg:hover, #titlebg:hover, #navbg:hover, #userActions:hover, .cats:hover {
+#userActions:hover, p:hover {
     background-color: transparent;
 }
 

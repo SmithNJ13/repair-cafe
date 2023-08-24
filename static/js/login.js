@@ -1,9 +1,24 @@
-const submitButton = document.getElementById("submitBtn");
+document.getElementById("login-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const form = new FormData(e.target);
+    const options = {
+        method: "POST",
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            user_name: form.get("username"),
+            user_password: form.get("password")
+        })
+    }
+    const response = await fetch("http://localhost:5000/accounts", options)
+    const data = await response.json()
 
-submitButton.addEventListener("click", function (event) {
-    event.preventDefault();
-
-    localStorage.setItem("authenticated", "true");
-    window.location.href = "./home.html";
-});
- 
+    if(response.status == 200) {
+        localStorage.setItem("token", data.token)
+        window.location.assign("home.html")
+    } else {
+        alert(data.error)
+    }
+})

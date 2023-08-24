@@ -10,8 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script defer src="./static/js/auth.js"></script>
-    <script defer src="./static/js/register.js"></script>
-    <link rel="stylesheet" href="./static/css/style.css">
+    <script defer src="./static/js/redirect.js"></script>
+    <link rel="stylesheet" href="./static/css/redirect.css">
     <title>Repair Café</title>
 </head>
 <body>
@@ -27,6 +27,7 @@
         </ul>
     </div>
     <!-- End of Navigation Bar -->
+
     <!-- Title -->
     <header>
         <div class="container" id="title_box">
@@ -35,32 +36,17 @@
         <div id="line"></div>
     </header>
     <!-- End of Title -->
+
+    <!-- Main body (images, descriptions, content) -->
     <main>
-        <div class="intro">
-            <text>SIGN UP BELOW:</text>
-        </div>
-        <div class="container">
-            <!-- Login Form -->
-            <form id="register-form">
-                <fieldset>
-                    <div class="mb3">
-                        <label for="username" class="form-label">Username</label>
-                        <input type="text" id="username" class="form-control" name="username">
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <label for="email" class="form-label">Email</label>
-                    <input type="text" id="email" class="form-control" name="email">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else</div>
-                </fieldset>
-                <fieldset>
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" id="password" class="form-control" name="password">
-                </fieldset>
-                <button type="submit" class="btn btn-success" id="submitBtn">Submit</button>
-              </form>
-              <!-- End of Login Form -->
+        <div class="popup">
+            <div class="container popup-content">
+                <p class="message">You are not logged in!</p>
+                <button class="button"><a href="./login.html">Login</a></button>
+                <button class="button"><a href="./register.html">Sign Up</a></button>
+            </div>
         </div>
     </main>
+    <!-- End of Main Body -->
 </body>
 </html>

@@ -1,0 +1,28 @@
+{
+  "name": "lap2_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"watchify -L ./static/js/register.js -o bundle.js --debug\" \"live-server\"",
+    "coverage": "jest --coverage",
+    "test": "jest"
+  },
+  "jest": {
+    "verbose": true,
+    "testPathIgnorePatterns": [
+      "./__tests__/helpers.js",
+      "./lap2_project-backend/__tests__/unit/models/Item.spec.js"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.1",
+    "jest": "^29.6.3",
+    "jsdom": "^22.1.0",
+    "live-server": "^1.2.2",
+    "watchify": "^4.0.0"
+  }
+}
