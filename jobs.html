@@ -10,57 +10,85 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script defer src="./static/js/auth.js"></script>
+    <script defer src="./static/js/jobs.js"></script>
     <link rel="stylesheet" href="./static/css/style.css">
     <title>Repair Café</title>
 </head>
 <body>
     <!-- Navigation Bar -->
-    <div class="container" id="navbg">
+    <div class="container" id="nav_box">
         <!-- NavBar content -->
         <ul class="navbar-nav">
-            <li class="nav-item"><a href="./logout.html"  id="logout" class="nav-link">LOGOUT</a></li>
+            <li class="nav-item"><a href="./logout.html"  class="nav-link" id="logout">LOGOUT</a></li>
             <li class="nav-item"><a href="./profile.html" class="nav-link" id="profile">PROFILE</a></li>
-            <li class="nav-item"><a href="./login.html" id= "login" class="nav-link">LOGIN</a></li>
-            <li class="nav-item"><a href="./items.html" class="nav-link">ITEMS</a></li>
-            <li class="nav-item"><a href="./jobs.html" class="nav-link">JOBS</a></li>
+            <li class="nav-item"><a href="./login.html" class="nav-link" id= "login">LOGIN</a></li>
+            <li class="nav-item"><a href="./items.html" class="nav-link" id="items">ITEMS</a></li>
+            <li class="nav-item"><a href="./jobs.html" class="nav-link" id="jobs">JOBS</a></li>
         </ul>
     </div>
     <!-- End of Navigation Bar -->
 
     <!-- Title -->
     <header>
-        <div class="container" id="titlebg">
-            <a class="title" href="./home.html">Repair Café</a>
+        <div class="container" id="title_box">
+            <a id="title_text" href="./home.html">Repair Café</a>
         </div>
-        <div class="divider"></div>
+        <div id="line"></div>
     </header>
     <!-- End of Title -->
 
     <!-- Main body (images, descriptions, content) -->
     <main>
-        <div class="introBody">
+        <div class="intro">
             <text>Here are all the jobs available:</text>
         </div>
-        <div class="container" id="mainbg">
-            <div class="services">
+        <div class="container" id="main_box">
+            <div class="services" id="1">
                 <div class="container row1-images">
-                    <img class="cat1" src="./static/images/cuteCat.png" alt="cute cat">
-                    <img class="cat2" src="./static/images/cuteCat.png" alt="cute cat">
+                    <img id="cat1" src="./static/images/cuteCat.png" alt="cute cat">
+                    <img id="cat2" src="./static/images/cuteCat.png" alt="cute cat">
                 </div>
                 <div class="container row1-text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod magni assumenda architecto debitis atque dolorum quae magnam tempora? Delectus, ad.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque vitae quam dolorem expedita iure praesentium eos?</p>
+                    <div class="container item" id="job_1">
+                        <p id="name">jobName</p>
+                        <p id="date">jobDate</p>
+                        <p id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod magni assumenda architecto debitis atque dolorum quae magnam tempora? Delectus, ad.</p>
+                        <p id="available">available?</p>
+                        <p id="completed">completed?</p>
+                        <button id="accept">Accept job</button>
+                    </div>
+                    <div class="container item" id="job_2">
+                        <p id="name">jobName</p>
+                        <p id="date">jobDate</p>
+                        <p id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod magni assumenda architecto debitis atque dolorum quae magnam tempora? Delectus, ad.</p>
+                        <p id="available">available?</p>
+                        <p id="completed">completed?</p>
+                        <button id="accept">Accept job</button>
+                    </div>
                 </div>
             </div>
-            <div class="services">
+            <div class="services" id="2">
                 <div class="container row2-images">
-                    <img class="cat3" src="./static/images/cuteCat.png" alt="cute cat">
-                    <img class="cat4" src="./static/images/cuteCat.png" alt="cute cat">
+                    <img id="cat3" src="./static/images/cuteCat.png" alt="cute cat">
+                    <img id="cat4" src="./static/images/cuteCat.png" alt="cute cat">
                 </div>
                 <div class="container row2-text">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit earum inventore fugiat rem.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, earum placeat ipsam dolores fugiat similique sequi sit eum.</p>
-                </div>
+                    <div class="container item" id="job_3">
+                        <p id="name">jobName</p>
+                        <p id="date">jobDate</p>
+                        <p id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod magni assumenda architecto debitis atque dolorum quae magnam tempora? Delectus, ad.</p>
+                        <p id="available">available?</p>
+                        <p id="completed">completed?</p>
+                        <button id="accept">Accept job</button>
+                    </div>
+                    <div class="container item" id="job_4">
+                        <p id="name">jobName</p>
+                        <p id="date">jobDate</p>
+                        <p id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod magni assumenda architecto debitis atque dolorum quae magnam tempora? Delectus, ad.</p>
+                        <p id="available">available?</p>
+                        <p id="completed">completed?</p>
+                        <button id="accept">Accept job</button>
+                    </div>
             </div>
         </div>
     </main>

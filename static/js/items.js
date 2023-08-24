@@ -12,5 +12,5 @@ document.addEventListener("DOMContentLoaded", async () => {
     itemName.innerHTML = arr[0].itemName;
     sellerId.innerHTML = arr[0].sellerId;
     desc.innerHTML = arr[0].itemDescription;
-    price.innerHTML = arr[0].price;
+    price.innerHTML = arr[0].price; 
 })

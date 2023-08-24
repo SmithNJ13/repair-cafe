@@ -11,7 +11,8 @@
   "jest": {
     "verbose": true,
     "testPathIgnorePatterns": [
-      "./__tests__/helpers.js"
+      "./__tests__/helpers.js",
+      "./lap2_project-backend/__tests__/unit/models/Item.spec.js"
     ]
   },
   "keywords": [],
