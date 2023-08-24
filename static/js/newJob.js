@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     }
 
-    const res = await fetch("http://localhost:3000/items", options)
+    const res = await fetch("https://cafe-test-ngey.onrender.com/items", options)
     if (res.status !== 200) {
         window.location.assign('./redirect.html')
     }
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         })
         
         try {
-            const response = await fetch("http://localhost:3000/jobs", {
+            const response = await fetch("https://cafe-test-ngey.onrender.com/jobs", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

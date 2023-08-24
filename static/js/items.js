@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
-    const response = await fetch("http://localhost:3000/items");
+    const response = await fetch("https://cafe-test-ngey.onrender.com/items");
     const data = await response.json();
     const arr = data.data;
 
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
         async function deleteFromServer(id) {
             try {
-                const response = await fetch(`http://localhost:3000/items/${id}`, {
+                const response = await fetch(`https://cafe-test-ngey.onrender.com/items/${id}`, {
                     method: "DELETE"
                 })
                 if(response.status === 204) {
