@@ -1,7 +1,6 @@
 {
   "name": "lap2_project",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "concurrently \"watchify -L ./static/js/register.js -o bundle.js --debug\" \"live-server\"",
@@ -24,5 +23,6 @@
     "jsdom": "^22.1.0",
     "live-server": "^1.2.2",
     "watchify": "^4.0.0"
-  }
+  },
+  "description": ""
 }

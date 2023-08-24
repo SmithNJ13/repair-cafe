@@ -32,14 +32,14 @@ describe("home.html", () => {
     });
 });
 
-// describe("items.html", () => {
-//     beforeEach(async () => {
-//         dom = await renderDOM("./items.html");
-//         document = dom.window.document;
-//     })
+describe("items.html", () => {
+    beforeEach(async () => {
+        dom = await renderDOM("./items.html");
+        document = dom.window.document;
+    })
 
-//     it("displays item names", () => {
-//         const name = document.querySelector("#item_1 #name")
-//         expect(name.textContent).toBe("Toaster")
-//     })
-// });
+    it("displays item names", () => {
+        const name = document.querySelector("#item_1 #name")
+        expect(name.textContent).toBe("Toaster")
+    })
+});
