@@ -9,7 +9,8 @@
     <!--  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <script defer src="./static/js/auth.js"></script>
+    <!-- <script defer src="./static/js/auth.js"></script> -->
+    <script src="./static/js/newitem.js"></script>
     <link rel="stylesheet" href="./static/css/style.css">
     <title>Repair Café</title>
 </head>
@@ -38,6 +39,25 @@
 
     <!-- Main body (images, descriptions, content) -->
     <main>
+        <div class="container" id="addItemBox">
+            <h2>Add Item</h2>
+            <form id="itemForm">
+                <label for="sellerId">Seller ID:</label>
+                <input type="text" id="sellerId" name="seller_id" required><br><br>
+            
+                <label for="itemName">Item Name:</label>
+                <input type="text" id="itemName" name="item_name" required><br><br>
+                
+                <label for="itemDescription">Item Description:</label>
+                <textarea id="itemDescription" name="item_description" required></textarea><br><br>
+                
+                <label for="itemPrice">Item Price:</label>
+                <input type="number" id="itemPrice" name="price" required><br><br>
+            
+                <button type="submit">Add Item</button>
+            </form>
+            <div id="itemPostedMessage" style="display: none;">Item posted!</div>
+        </div>
     </main>
     <!-- End of Main Body -->
 </body>
