@@ -1,6 +1,18 @@
 document.addEventListener("DOMContentLoaded", async () => {
     const itemForm = document.getElementById("itemForm")
     const itemPostedMessage = document.getElementById("itemPostedMessage")
+
+    const options = {
+        headers: {
+            Authorization: localStorage.getItem('token')
+        }
+    }
+
+    const res = await fetch("http://localhost:3000/items", options)
+    if (res.status !== 200) {
+        window.location.assign('./redirect.html')
+    }
+
     itemForm.addEventListener("submit", async (e) => {
         e.preventDefault();
         const formData = new FormData(itemForm)

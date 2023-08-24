@@ -1,6 +1,17 @@
 document.addEventListener("DOMContentLoaded", async () => {
     const jobForm = document.getElementById("jobForm")
     const jobPostedMessage = document.getElementById("jobPostedMessage")
+
+    const options = {
+        headers: {
+            Authorization: localStorage.getItem('token')
+        }
+    }
+
+    const res = await fetch("http://localhost:3000/items", options)
+    if (res.status !== 200) {
+        window.location.assign('./redirect.html')
+    }
     
     jobForm.addEventListener("submit", async (e) => {
         e.preventDefault()
