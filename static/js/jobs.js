@@ -12,21 +12,25 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     // Create Container(s)
-    
-    // Append Item(s)
     function containerCreate(job) {
+        const str = job.post_date.toString().split("T")[0];
+        console.log(str);
+
         const jobElement = document.createElement('div');
         jobElement.className = 'container job';
         jobElement.id = `job_${job.job_id}`;jobElement
         jobElement.appendChild(pCreate('name', job.job_name));
-        jobElement.appendChild(pCreate('date', job.post_date));
+        jobElement.appendChild(pCreate('date', str));
         jobElement.appendChild(pCreate('desc', job.job_description));
         jobElement.appendChild(pCreate('available', `available: ${job.available}`));
         jobElement.appendChild(pCreate('completed', `completed: ${job.completed}`));
 
         const acceptButton = document.createElement('button');
         acceptButton.id = 'accept';
-        acceptButton.textContent = 'accept';
+        acceptButton.textContent = 'Accept';
+        acceptButton.addEventListener("click", () => {
+            getInfo(job.job_name, job.job_id);
+        })
         jobElement.appendChild(acceptButton);
 
         return jobElement;
@@ -71,5 +75,31 @@ document.addEventListener("DOMContentLoaded", async () => {
         newImageElement.alt = 'cute cat';
         currentImagesContainer.appendChild(newImageElement);
         currentTextContainer.appendChild(newItemElement);
+    }
+
+    // Click purchase > popup appears "an item has been purchased! [item name]" > delete item and refresh page
+    function getInfo(name, id) {
+        alert(`A job has been accepted! [${name}]`);
+
+        function deleteFromClient(id) {
+            const DOMelement = document.querySelector(`#job_${id}`)
+            if(DOMelement) {
+                DOMelement.remove();
+            }
+        }
+        async function deleteFromServer(id) {
+            try {
+                const response = await fetch(`http://localhost:5000/jobs/${id}`, {
+                    method: "DELETE"
+                })
+                if(response.status === 204) {
+                    location.reload();
+                }
+            } catch (error) {
+                console.error("An error occurred: ", error)
+            }
+        }
+        deleteFromServer(id);
+        deleteFromClient(id);
     }
 });
