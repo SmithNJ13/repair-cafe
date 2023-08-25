@@ -124,8 +124,6 @@ header {
 .item #purchase {
     position: relative;
     margin: auto;
-    bottom: 2.7rem;
-    left: 7.7rem;
 }
 .container.item #name , .container.job #name {
     width: 55%;
@@ -197,7 +195,13 @@ header {
     padding: 10px;
     color: #362C49;
 }
-
+h1 {
+    justify-content: center;
+    position: relative;
+}
+#userBox {
+    background-color: var(--cadetGrey);
+}
 .userActions {
     position: relative;
     margin-left: auto;
@@ -205,17 +209,14 @@ header {
     padding-bottom: 20px;
     padding-left: 10px;
 }
-
 .userActions {
     display: flex;
     justify-content: center;
 }
-
 .userActions a{
     text-decoration: none;
     color: black;
 }
-
 .userActions button {
     margin: 0 10px;
     padding: 8px 16px;
@@ -226,45 +227,37 @@ header {
     cursor: pointer;
     white-space: nowrap; 
 }
-
 #userImage {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
-
 #userImage img {
     flex: 0 0 auto;
-    max-width: 250px;
-    max-height: 250px;
-    margin-right: 10px;
+    max-width: 16rem;
+    max-height: 16rem;
 }
-
 .userActions button:hover {
     transform: scale(1.1);
 }
-
 #main_box {
     color: #362C49;
     font-size: larger;
 }
-  
 #main_box h1 {
     margin: 0 auto 0 5px;
     width: fit-content;
     color: #362C49;
 }
-
 .username {
+    position: relative;
+    margin-left: 3rem;
     font-weight: bold;
     color: #362C49;
 }
-  
 .about-me {
     font-weight: bold; 
     color: #362C49;
 }
-
 /*END OF USER PROFILE*/
 
 /* STYLING OF ADD JOB AND ITEM FORMS */
