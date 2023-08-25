@@ -115,7 +115,7 @@ header {
     
 }
 
-.item {
+.item, .job {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -126,6 +126,17 @@ header {
     margin: auto;
     bottom: 2.7rem;
     left: 7.7rem;
+}
+.container.item #name , .container.job #name {
+    width: 55%;
+    font-weight: bold;
+    margin: 0.5rem;
+    border-bottom: 0.25rem solid var(--spicyMix);
+}
+@media all and (min-width: 12.5rem) {
+    .container.item #name {
+        width: 12.5rem;
+    }
 }
 /*END OF SERVICES*/
 
@@ -139,13 +150,7 @@ header {
     background-color: var(--pastelGreen);
     height: 100vh;
     width: 12.5vw; 
-    border-style: solid;
-    border-color: var(--pastelBrown);
-    border-bottom: 0;
-    border-top: 0;
-    border-right: 0;
-    border-left: 1;
-    border-width: 7px;
+    border-left: 0.5rem solid var(--pastelBrown);
 }
 .navbar-nav {
     display: block;

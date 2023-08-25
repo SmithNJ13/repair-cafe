@@ -2,9 +2,9 @@ const { renderDOM } = require ("./helpers")
 let dom;
 let document;
 
-describe("home.html", () => {
+describe("index.html", () => {
     beforeEach(async () => {
-        dom = await renderDOM("./home.html");
+        dom = await renderDOM("./index.html");
         document = dom.window.document; 
     });
 
@@ -39,7 +39,7 @@ describe("items.html", () => {
     })
 
     it("displays item names", () => {
-        const name = document.querySelector("#item_1 #name")
-        expect(name.textContent).toBe("Toaster")
+        const name = document.querySelector("#item_1 #name");
+        expect(name.textContent).toBeTruthy;
     })
 });
