@@ -236,10 +236,57 @@ header {
 }
 
 .userActions button:hover {
-    transform: scale(1.1); /* Enlarge button by 10% */ 
+    transform: scale(1.1);
 }
 
 /*END OF USER PROFILE*/
+
+/* STYLING OF ADD JOB AND ITEM FORMS */
+
+#addJobBox, #addItemBox {
+    text-align: center; 
+}
+  
+#addItemBox h2 {
+    margin: 0 auto 0 485px;
+    width: fit-content;
+    color: #362C49;
+}
+
+#addJobBox h2 {
+    margin: 0 auto 0 430px;
+    width: fit-content;
+    color: #362C49;
+}
+
+#jobForm, #itemForm {
+    position: relative;
+    margin-top: 5vh;
+    margin-right: 23.4vw; 
+    margin-left: 10.9vw;
+    display: flex;
+    flex-direction: column;
+}
+  
+#jobForm, #itemForm ul {
+    font-weight: bold;
+    position: relative;
+    right: 1.5vw; 
+    color: #362C49;
+}
+  
+#jobForm .form-control {
+    max-width: 50rem;
+}
+  
+#submitBtn {
+    margin-top: 15px;
+    width: 100px;
+    top: 1rem;
+    left: 29vw; 
+}
+
+/* END OF STYLING OF ADD JOB AND ITEM FORMS */
 
 #userActions:hover, p:hover {
     transform: scale(1.1);
