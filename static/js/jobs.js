@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     function appendItemToContainers(item) {
         const newItemElement = containerCreate(item);
         const newImageElement = document.createElement('img');
-        newImageElement.src = './static/images/cuteCat.png'; // Set your image source
+        newImageElement.src = './static/images/fixerCat.png';
         newImageElement.alt = 'cute cat';
         currentImagesContainer.appendChild(newImageElement);
         currentTextContainer.appendChild(newItemElement);

@@ -56,6 +56,8 @@ header {
     text-align: center;
     margin-right: 23.4vw;
     margin-left: 10.9vw;
+    padding-bottom: 1rem;
+    border-bottom: 5px solid var(--spicyMix);
 }
 .intro text {
     font-family: "Noto Sans Adlam", cursive;
@@ -88,9 +90,9 @@ header {
     justify-content: space-around;
 }
 .services img {
-    width: 200px;
-    height: 200px;
-    padding: 1rem;
+    width: 20%;
+    height: 20%;
+    padding: 0.5rem;
     object-fit: cover;
 }
 
