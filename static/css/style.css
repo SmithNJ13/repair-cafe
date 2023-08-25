@@ -79,9 +79,9 @@ header {
     justify-content: space-around;
 }
 .services img {
-    width: 200px;
-    height: 200px;
-    padding: 1rem;
+    width: 20%;
+    height: 20%;
+    padding: 0.5rem;
     object-fit: cover;
 }
 
