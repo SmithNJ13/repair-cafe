@@ -38,7 +38,7 @@ header {
     margin-left: 0;
 }
 #title_text {
-    background: linear-gradient(to right,#fda22a ,#fae25d, #fda22a, #fae25d, #fda22a);
+    background: linear-gradient(to right, #fda22a, #b9f179);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 3.25rem;
