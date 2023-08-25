@@ -76,27 +76,33 @@ document.addEventListener("DOMContentLoaded", async () => {
     
     // Click purchase > popup appears "an item has been purchased! [item name]" > delete item and refresh page
     function getInfo(name, id) {
-        alert(`An item has been purchased! [${name}]`);
+        const token = localStorage.getItem('token');
+        if (!token) {
+            window.location.assign('./redirect.html')
+        } else {
+            alert(`An item has been purchased! [${name}]`);
 
-        function deleteFromClient(id) {
-            const DOMelement = document.querySelector(`#item_${id}`)
-            if(DOMelement) {
-                DOMelement.remove();
-            }
-        }
-        async function deleteFromServer(id) {
-            try {
-                const response = await fetch(`https://cafe-test-ngey.onrender.com/items/${id}`, {
-                    method: "DELETE"
-                })
-                if(response.status === 204) {
-                    location.reload();
+            function deleteFromClient(id) {
+                const DOMelement = document.querySelector(`#item_${id}`)
+                if(DOMelement) {
+                    DOMelement.remove();
                 }
-            } catch (error) {
-                console.error("An error occurred: ", error)
             }
+            async function deleteFromServer(id) {
+                try {
+                    const response = await fetch(`https://cafe-test-ngey.onrender.com/items/${id}`, {
+                        method: "DELETE"
+                    })
+                    if(response.status === 204) {
+                        location.reload();
+                    }
+                } catch (error) {
+                    console.error("An error occurred: ", error)
+                }
+            }
+            deleteFromServer(id);
+            deleteFromClient(id);
         }
-        deleteFromServer(id);
-        deleteFromClient(id);
+
     }
 });

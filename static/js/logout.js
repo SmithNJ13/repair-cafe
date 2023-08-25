@@ -14,7 +14,7 @@ document.getElementById("logout").addEventListener("click", async (e) => {
     if (response.status = 200) {
       localStorage.removeItem("token")
       localStorage.removeItem("id")
-      window.location.assign("./redirect.html")
+      window.location.assign("./index.html")
     }
   } catch (error) {
     console.log(error.message)    
