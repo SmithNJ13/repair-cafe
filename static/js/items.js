@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         itemElement.appendChild(pCreate('name', item.item_name));
         itemElement.appendChild(pCreate('seller', item.seller_id));
         itemElement.appendChild(pCreate('desc', item.item_description));
-        itemElement.appendChild(pCreate('price', `Price: £${item.price}`));
+        itemElement.appendChild(pCreate('price', `Price: ${item.price}`));
 
         const purchaseButton = document.createElement('button');
         purchaseButton.id = 'purchase';
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     function appendItemToContainers(item) {
         const newItemElement = containerCreate(item);
         const newImageElement = document.createElement('img')
-        newImageElement.src = './static/images/sellerCat.png' // Set your image source
+        newImageElement.src = './static/images/sellerCat.png'
         newImageElement.alt = 'cute cat'
         currentImagesContainer.appendChild(newImageElement)
         currentTextContainer.appendChild(newItemElement);

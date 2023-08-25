@@ -48,6 +48,8 @@ header {
     text-align: center;
     margin-right: 23.4vw;
     margin-left: 10.9vw;
+    padding-bottom: 1rem;
+    border-bottom: 5px solid var(--spicyMix);
 }
 .intro text {
     font-family: "Noto Sans Adlam", cursive;
