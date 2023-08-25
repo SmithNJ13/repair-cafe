@@ -239,6 +239,27 @@ header {
     transform: scale(1.1);
 }
 
+#main_box {
+    color: #362C49;
+    font-size: larger;
+}
+  
+#main_box h1 {
+    margin: 0 auto 0 5px;
+    width: fit-content;
+    color: #362C49;
+}
+
+.username {
+    font-weight: bold;
+    color: #362C49;
+}
+  
+.about-me {
+    font-weight: bold; 
+    color: #362C49;
+}
+
 /*END OF USER PROFILE*/
 
 /* STYLING OF ADD JOB AND ITEM FORMS */
@@ -287,7 +308,3 @@ header {
 }
 
 /* END OF STYLING OF ADD JOB AND ITEM FORMS */
-
-#userActions:hover, p:hover {
-    transform: scale(1.1);
-}
